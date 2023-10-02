@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package myapp;
+
+message Message {
+    string text = 1;
+    string message = 2; 
+}
+
+service CommunicationService {
+    rpc SendMessage(Message) returns (Message);
+}
